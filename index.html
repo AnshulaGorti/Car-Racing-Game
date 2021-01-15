@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <title>Multiplayer Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="p5.play.js"></script>
 
-    <title>src</title>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
 
-    <script src="./p5.js"></script>
-    <script src="./matter.js"></script>
-    <script src="./js/Sling.js"></script>
-    <script src="./js/Pendulum.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script src="sketch.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAwPLrBNO6PRCKrGN6GWoHCgAu18gfZqMM",
+    authDomain: "multi-player-car-racing-d0cc0.firebaseapp.com",
+    databaseURL: "https://multi-player-car-racing-d0cc0-default-rtdb.firebaseio.com",
+    projectId: "multi-player-car-racing-d0cc0",
+    storageBucket: "multi-player-car-racing-d0cc0.appspot.com",
+    messagingSenderId: "628023440627",
+    appId: "1:628023440627:web:cb84a24cd90505a3967386"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        display: flex;
-        /* This centers our sketch horizontally. */
-        justify-content: center;
-        /* This centers our sketch vertically. */
-        align-items: center;
-      }
-      canvas {
-        margin: auto;
-        border: 2px solid balck;
-      }
-    </style>
+    <script src="js/Player.js"></script>
+    <script src="js/Form.js"></script>
+    <script src="js/Game.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
-  <body></body>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
 </html>
